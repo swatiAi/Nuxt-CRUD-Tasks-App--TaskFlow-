@@ -93,6 +93,17 @@ const form = reactive<TaskFormValues>({
   priority: props.initialValues?.priority ?? 'medium',
   status: props.initialValues?.status ?? 'todo'
 })
+    watch(
+    () => props.initialValues,
+    (val) => {
+        if (!val) return
+        form.title = val.title ?? ''
+        form.description = val.description ?? ''
+        form.priority = val.priority ?? 'medium'
+        form.status = val.status ?? 'todo'
+    },
+    { deep: true, immediate: true }
+    )
 
 const errors = reactive<{ title?: string }>({})
 

@@ -34,7 +34,6 @@
     </div>
   </div>
 
-  <!-- Not Found -->
   <div v-else class="text-center py-12 text-gray-500">
     Task not found.
   </div>
@@ -42,7 +41,11 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { getTaskById } = useTasks()
+const { getTaskById, seedIfEmpty } = useTasks()
+
+await callOnce('seed-tasks', () => {
+  seedIfEmpty()
+})
 
 const task = computed(() => {
   const id = route.params.id as string
