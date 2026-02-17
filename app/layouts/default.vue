@@ -4,7 +4,7 @@
     <header class="border-b bg-white">
       <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-xl font-semibold">
-          Nuxt CRUD App
+          Nuxt CRUD App by US
         </h1>
 
         <nav class="space-x-4">
