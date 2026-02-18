@@ -1,75 +1,36 @@
-# Nuxt Minimal Starter
+# Nuxt CRUD Tasks App (TaskFlow)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple CRUD web app built with **Nuxt 4**, **Vue 3 (Composition API)**, **TypeScript**, and **Tailwind CSS**.
+Includes a small **Nitro server API** for tasks and a clean **dark UI theme**.
+
+App runs at:
+UI: http://localhost:3000/tasks
+API: http://localhost:3000/api/tasks
+
+## Features
+- List tasks (cards)
+- View single task details
+- Create task
+- Edit task
+- Delete task
+- Loading, error, and empty states
+- Basic validation (client + server)
+
+## Tech Stack
+- Nuxt 4
+- Vue 3 (Composition API)
+- Tailwind CSS
+- TypeScript
+- Nitro Server API (`server/api`)
+
+## Project Structure (important parts)
+- `app/pages/tasks/` — UI pages (list, create, details, edit)
+- `app/components/tasks/TaskForm.vue` — reusable form component
+- `app/composables/useTasksApi.ts` — API wrapper using `$fetch`
+- `server/api/tasks/` — API routes (GET/POST/PUT/DELETE)
+- `server/utils/tasksStore.ts` — in-memory store (for demo/training)
 
 ## Setup
-
-Make sure to install dependencies:
-
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
