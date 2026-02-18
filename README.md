@@ -7,6 +7,8 @@ App runs at:
 UI: http://localhost:3000/tasks
 API: http://localhost:3000/api/tasks
 
+![Alt text](ProjectFrontPage.png)
+
 ## Features
 - List tasks (cards)
 - View single task details
